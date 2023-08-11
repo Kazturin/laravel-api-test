@@ -9,7 +9,7 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="my-6">
                 <a href="{{route('users.create')}}" class="flex items-center justify-between w-40 px-4 py-2 text-sm font-medium leading-5 text-white transition-colors duration-150 bg-gray-600 border border-transparent rounded-lg hover:bg-gray-700 ">
-                    Create user
+                    Добавить пользователя
                     <span class="ml-2" aria-hidden="true">+</span>
                 </a>
             </div>

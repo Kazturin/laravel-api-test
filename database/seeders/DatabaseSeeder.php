@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
         ]);
-     //   ArticleCategory::factory(4)->create();
-     //   Article::factory(10)->create();
+        ArticleCategory::factory(4)->create();
+        Article::factory(10)->create();
     }
 }
