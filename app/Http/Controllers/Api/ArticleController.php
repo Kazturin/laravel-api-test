@@ -14,7 +14,7 @@ class ArticleController extends Controller
     // Метод получения всех статей
 
     public function index(Request $request){
-        return ArticleResource::collection(Article::paginate($request->per_page?$request->per_page:10));
+        return ArticleResource::collection(Article::paginate($request->per_page??$request->per_page));
     }
 
     // Метод получения статьи по slug

@@ -1,14 +1,12 @@
 <?php
 
-namespace App\Http\Livewire;
+namespace App\Http\Livewire\Table;
 
-//use App\Models\Article;
 use App\Models\Article;
-use Illuminate\Database\Eloquent\Model;
 use Livewire\Component;
 use Livewire\WithPagination;
 
-class ArticleTable extends Component
+class LivewireTable extends Component
 {
     use WithPagination;
 
@@ -25,10 +23,10 @@ class ArticleTable extends Component
         $this->sortField = $field;
     }
 
-    public function render()
-    {
-        return view('livewire.article-table',[
-            'articles' => Article::orderBy($this->sortField,$this->sortDirection)->paginate(10)
-        ]);
+    public function updateOrder($list){
+
+        foreach ($list as $item) {
+            Article::find($item['value'])->update(['sort'=>$item['order']]);
+        }
     }
 }

@@ -21,7 +21,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     <div class="w-full overflow-x-auto">
-                        @livewire('article-table')
+                        @livewire('table.article-table')
                     </div>
                 </div>
             </div>

@@ -13,6 +13,6 @@ class ArticleCategoryController extends Controller
     // Метод получения всех категорий статей
 
     public function index(Request $request){
-      return ArticleCategoryResource::collection(\App\Models\ArticleCategory::paginate($request->per_page?$request->per_page:10));
+      return ArticleCategoryResource::collection(\App\Models\ArticleCategory::paginate($request->per_page??$request->per_page));
     }
 }
